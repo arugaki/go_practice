@@ -126,7 +126,7 @@ func checkSum(msg []byte) uint16 {
 
 func checkErr(err error) {
 	if err != nil {
-		fmt.Println(err)
+		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 }
